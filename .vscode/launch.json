@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SumOfAllNodes",
+            "request": "launch",
+            "mainClass": "BinaryTree.SumOfAllNodes",
+            "projectName": "Algorithms_c4698021"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PrintPathWhereSumEqualsValue",
+            "request": "launch",
+            "mainClass": "BinaryTree.PrintPathWhereSumEqualsValue",
+            "projectName": "Algorithms_c4698021"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BinaryTreeNode<Algorithms_c4698021>",
+            "request": "launch",
+            "mainClass": "BinaryTree.BinaryTreeNode",
+            "projectName": "Algorithms_c4698021"
+        }
+    ]
+}
