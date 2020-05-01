@@ -8,6 +8,27 @@
             "type": "java",
             "name": "CodeLens (Launch) - SumOfAllNodes",
             "request": "launch",
+            "mainClass": "SumOfAllNodes",
+            "projectName": "algorithms"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BinaryTreeNode",
+            "request": "launch",
+            "mainClass": "BinaryTreeNode",
+            "projectName": "Algorithms_c4698021"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SumOfAllNodes",
+            "request": "launch",
+            "mainClass": "SumOfAllNodes",
+            "projectName": "Algorithms_c4698021"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SumOfAllNodes",
+            "request": "launch",
             "mainClass": "BinaryTree.SumOfAllNodes",
             "projectName": "Algorithms_c4698021"
         },

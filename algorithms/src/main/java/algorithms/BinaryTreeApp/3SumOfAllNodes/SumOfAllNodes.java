@@ -1,22 +1,23 @@
-package BinaryTree;
 
- class SumOfNodes {
+package algorithms.BinaryTreeApp.BinaryTree.
+import algorithms.BinaryTreeApp.BinaryTree.BinaryTreeNode;
 
-int SumOfAllNodes = 0; 
-
-public  int SumOfAllNodes(BinaryTreeNode node){
-
-  if(node == null ){return 0;}
-    return node.val + SumOfAllNodes(node.left) + SumOfAllNodes(node.right);
-   
-}
- }
 
 public class SumOfAllNodes{
-public static void main(String[] args) {
+
+  public static int SumOfNodes(BinaryTreeNode node) {
+
+    if (node == null) {
+      return 0;
+    }
+    return node.val + SumOfNodes(node.left) + SumOfNodes(node.right);
+
+  }
+
+  public static void main(String[] args) {
+
     BinaryTreeNode root = new BinaryTreeNode(2);
-    SumOfNodes sum = new SumOfNodes();
-     
+
     root.left = new BinaryTreeNode(7);
     root.right = new BinaryTreeNode(5);
     root.left.left = new BinaryTreeNode(2);
@@ -26,7 +27,7 @@ public static void main(String[] args) {
     root.right.right = new BinaryTreeNode(9);
     root.right.right.left = new BinaryTreeNode(4);
 
-    System.out.print("Total Sum: " +sum.SumOfAllNodes(root));
+    System.out.print("Total Sum: " + SumOfAllNodes.SumOfNodes(root));
 }
 
 }

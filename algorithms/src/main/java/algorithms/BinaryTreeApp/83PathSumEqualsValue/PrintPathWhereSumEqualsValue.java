@@ -1,7 +1,8 @@
-package BinaryTree;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import algorithms.BinaryTreeApp.BinaryTree.BinaryTreeNode;
 
  class PrintPathWhereSumEqualsValueHelper{
         List<Integer> path = new ArrayList<Integer>();
