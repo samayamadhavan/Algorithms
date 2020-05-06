@@ -1,0 +1,37 @@
+/*
+Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
+
+Examples:
+
+s = "leetcode"
+return 0.
+
+s = "loveleetcode",
+return 2.
+Note: You may assume the string contain only lowercase letters.
+*/
+
+class Solution {
+    public int firstUniqChar(String s) {
+       
+       // Map<Character, Boolean> sMap = new HashMap<Character, Boolean>();
+        List<Character> repeatList = new ArrayList<Character>();
+        List<Character> nonRepeatIndex = new ArrayList<Character>();
+        char[] sArr = s.toCharArray();
+        if(sArr==null || sArr.length==0 ){return -1;}
+        for(char c : sArr){
+            if(repeatList.contains(c)){
+                if(nonRepeatIndex.size()>0 && nonRepeatIndex.indexOf(c)>-1){
+                    nonRepeatIndex.remove(nonRepeatIndex.indexOf(c));
+                }
+                
+            }
+            else{
+                repeatList.add(c);
+                nonRepeatIndex.add(c);
+                Iterator<Character> itr = nonRepeatIndex.iterator();
+            }
+        }
+        return nonRepeatIndex.size()>0  ? s.indexOf(nonRepeatIndex.get(0)) : -1 ;
+    }
+}
