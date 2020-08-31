@@ -1,0 +1,24 @@
+class Solution {
+    public boolean isValid(String s) {
+        //char[] opens = new char[]{'(','[','{'};
+        //char[] close = new char[]{')',']','}'};
+        
+        String opens = "({[";
+        String closes = ")}]";
+        
+        Stack<Character> stck = new Stack<Character>();
+        for (char curr : s.toCharArray()){
+            if(opens.indexOf(curr)>-1){
+                stck.push(curr);
+            }else{
+                if(stck.isEmpty()) return false; 
+                int correspondingCloseIdx  = opens.indexOf(stck.pop());
+                if(curr!=closes.charAt(correspondingCloseIdx)){
+                    return false;
+                }
+            }
+        }
+        if(stck.isEmpty()) return true; 
+        else return false;
+    }
+} 
