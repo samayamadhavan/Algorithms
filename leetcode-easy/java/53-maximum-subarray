@@ -1,0 +1,33 @@
+################
+#Kadane's Algo##
+################
+
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int penUltimate =nums[0];
+        int ultimateMax = nums[0];
+        for(int i = 1; i < nums.length; i++){
+            penUltimate = Math.max(penUltimate+nums[i],nums[i]);
+            ultimateMax = Math.max(penUltimate,ultimateMax);
+        }
+        return ultimateMax;
+    }
+}
+
+########
+#Faster#
+#######
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int sum = 0;
+        int maxSum = nums[0];
+        for(int i = 0; i < nums.length; i++){
+            sum += nums[i];
+            maxSum = Math.max(maxSum, sum);
+            if(sum < 0){
+                sum = 0;
+            }
+        }
+        return maxSum;
+    }
+}
