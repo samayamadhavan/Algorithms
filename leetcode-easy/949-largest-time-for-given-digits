@@ -1,0 +1,52 @@
+class Solution {
+    private int max = -1;
+    public String largestTimeFromDigits(int[] A) {
+        
+        dfs(A,0);
+        if(max ==-1){
+            return "";
+            
+        }else{
+            return String.format("%02d:%02d",max/100,max%100);
+        }
+        
+    }
+    
+   private void dfs(int[]A, int start){
+        
+        if(start==A.length){
+            this.getMaxTime(A);
+            return;
+        }
+       //recurse
+       for(int i=start; i<A.length; i++){
+           
+           this.swap(A,i,start);
+           this.dfs(A,start+1);
+           this.swap(A,i,start);
+       }
+       
+        
+    }
+    private void getMaxTime(int[] A){
+        int hour = A[0]*10 + A[1];
+        int mins = A[2]*10 + A[3];
+        
+        if(hour<24 && mins <60) {
+            //time is valid. check if current time is higher than prev highest
+            
+            max = Math.max(max, hour*100+mins);
+        }
+    }
+
+    private void swap(int[] A, int x, int y){
+        if(x!=y){
+        int temp = A[x];
+        A[x] = A[y];
+        A[y] = temp;
+        }
+
+    }
+    
+    
+}
