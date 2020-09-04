@@ -1,0 +1,32 @@
+class Solution {
+    public boolean isAlienSorted(String[] words, String order) {
+        
+        for(int i = 0; i<words.length-1; i++){
+            if(!isAlienSorted(words[i],words[i+1],order)) return false;
+        }
+        return true;
+        
+    }
+    
+    private boolean isAlienSorted(String word1, String word2, String order){
+        int smallerWordL = Math.min(word1.length(),word2.length());
+            for(int j=0; j<smallerWordL; j++){
+                char second = word2.charAt(j);
+                char first = word1.charAt(j);
+                if(order.indexOf(second) > order.indexOf(first)){
+                   return true; 
+                } 
+                if(order.indexOf(second) < order.indexOf(first)){
+                   return false; 
+                } 
+            }
+        
+        //first set of characters are same. return true if first string is smaller
+        if(word1.length()<word2.length()){
+            return true;
+        }
+        return false;
+            
+            
+    }
+}
