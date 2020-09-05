@@ -1,0 +1,65 @@
+class Solution {
+    public List<Integer> partitionLabels(String S) {
+        Set<Character> visitedChar = new TreeSet<Character>();
+        List<Integer> partitionList = new ArrayList<Integer>();
+        int max = 0;
+        int currentMax = 0; 
+        int prevMax = 0; 
+        for(int i = 0; i<S.length(); i++){
+
+            char currentChar = S.charAt(i);
+                        
+            if(visitedChar.contains(currentChar)){
+                continue;
+            }else{
+                visitedChar.add(currentChar);
+            }
+             int index = i; 
+            currentMax = i;
+            while(index!=-1){
+
+                index = S.indexOf(currentChar,index);
+                if(index!=-1){
+                    
+                    currentMax = index;
+                    index++;
+                    
+                }
+            }
+            
+            if(i>max && currentMax>max ){
+                
+                if(partitionList.size()==0){
+                    partitionList.add(max+1);
+                    prevMax = max+1;
+                }else{
+                    int value = max - prevMax +1;
+                    prevMax = max+1;
+                    partitionList.add(value);
+                }
+                //max = currentMax;
+                
+            }
+            max = Math.max(currentMax,max);
+            
+        
+        
+        }
+            
+           
+                if(partitionList.size()==0){
+                    partitionList.add(max+1);
+                    
+                }else{
+                    int value = max - prevMax +1;
+                   
+                    partitionList.add(value);
+                }
+                //max = currentMax;
+                
+            
+        
+        return partitionList;
+        
+    }
+}
