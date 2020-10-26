@@ -1,4 +1,4 @@
-
+package algorithms;
 
 class Node {
   Node left;
