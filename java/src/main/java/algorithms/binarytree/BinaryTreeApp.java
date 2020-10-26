@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.binarytree;
 
 class Node {
   Node left;

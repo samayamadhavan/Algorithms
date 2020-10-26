@@ -1,3 +1,5 @@
+package algorithms.binarytree;
+
 public class DiffBetweenEvenAndOddLevel {
     
     public static int evenOddLevel(Node n){
