@@ -1,3 +1,5 @@
+
+
 public class NumberOfNodes {
     
     public static int nodesCount(Node node){

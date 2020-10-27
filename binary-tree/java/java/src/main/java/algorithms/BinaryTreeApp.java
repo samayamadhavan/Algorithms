@@ -1,4 +1,4 @@
-package algorithms.binarytree;
+
 
 class Node {
   Node left;
@@ -34,7 +34,8 @@ public class BinaryTreeApp {
 
    // System.out.print("Total Sum: " + SumOfAllNodes.getSumOfNodes(root));
   // System.out.print("Diff even and odd: " + DiffBetweenEvenAndOddLevel.evenOddLevel(root));
-  System.out.print("Nodes count: " + NumberOfNodes.nodesCount(root));
+  //System.out.print("Nodes count: " + NumberOfNodes.nodesCount(root));
+  System.out.print("Leaf count: " + CountLeafNodes.leafCount(root));
   }
 
 }
