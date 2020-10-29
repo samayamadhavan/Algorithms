@@ -39,8 +39,10 @@ public class BinaryTreeApp {
  // System.out.print("Leaf count: " + CountLeafNodes.leafCount(root));
  //HeightOfBinaryTree heightHelper = new HeightOfBinaryTree();
  //System.out.print("Height: " + heightHelper.getHeight(root));
-    PrintAtGivenLevel printAtLevel = new PrintAtGivenLevel();
-    printAtLevel.printAtLevel(root,2);
+   // PrintAtGivenLevel printAtLevel = new PrintAtGivenLevel();
+   // printAtLevel.printAtLevel(root,2);
+   PrintLevelOrder printLevelOrder = new PrintLevelOrder();
+   printLevelOrder.levelOrderPrint(root);
   }
 
 }
