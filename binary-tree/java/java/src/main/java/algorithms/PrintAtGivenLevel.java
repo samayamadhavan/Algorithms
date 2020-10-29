@@ -8,7 +8,7 @@ public class PrintAtGivenLevel{
         //caluclate current height
         //if currentHeight == level -> print node and then return
 
-        printAtLevelHelper(node,0,level);
+        printAtLevelHelper(node,1,level);
 
     }
 
