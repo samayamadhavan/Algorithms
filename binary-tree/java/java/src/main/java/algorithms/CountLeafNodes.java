@@ -1,5 +1,5 @@
 
-
+package algorithms;
 public class CountLeafNodes {
     
     public static int leafCount(Node node){

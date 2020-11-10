@@ -1,3 +1,5 @@
+package algorithms;
+
 public class SumOfAllNodes {
       /*
    * It'll return sum of all nodes in Binary Tree
